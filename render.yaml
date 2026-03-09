@@ -1,0 +1,32 @@
+services:
+  # Node.js Backend API
+  - type: web
+    name: mealmatrix-backend
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5003
+      - key: MONGODB_URI
+        sync: false # You must set this in the Render dashboard
+      - key: JWT_SECRET
+        sync: false # You must set this in the Render dashboard
+      - key: FRONTEND_URL
+        sync: false # You must set this to the Vercel deployed URL later
+
+  # Next.js Frontend
+  - type: web
+    name: mealmatrix-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          type: web
+          name: mealmatrix-backend
+          envVarKey: RENDER_EXTERNAL_URL

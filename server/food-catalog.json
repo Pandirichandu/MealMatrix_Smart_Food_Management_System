@@ -1,0 +1,866 @@
+[
+  {
+    "displayName": "Aloo Paratha",
+    "normalizedName": "aloo-paratha",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Biryani",
+    "normalizedName": "biryani",
+    "images": [
+      "/menu-images/biryani.jpg"
+    ],
+    "defaultImage": "/menu-images/biryani.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chapati",
+    "normalizedName": "chapati",
+    "images": [
+      "/menu-images/chapati.jpg"
+    ],
+    "defaultImage": "/menu-images/chapati.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chicken Curry",
+    "normalizedName": "chicken-curry",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Chole Bhature",
+    "normalizedName": "chole-bhature",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Curd Rice",
+    "normalizedName": "curd-rice",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Dal Makhani",
+    "normalizedName": "dal-makhani",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Dosa",
+    "normalizedName": "dosa",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Fried Rice",
+    "normalizedName": "fried-rice",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Idli",
+    "normalizedName": "idli",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Manchurian",
+    "normalizedName": "manchurian",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Naan",
+    "normalizedName": "naan",
+    "images": [
+      "/menu-images/naan.jpg"
+    ],
+    "defaultImage": "/menu-images/naan.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Paneer Butter Masala",
+    "normalizedName": "paneer-butter-masala",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Poha",
+    "normalizedName": "poha",
+    "images": [
+      "/menu-images/poha.jpg"
+    ],
+    "defaultImage": "/menu-images/poha.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Puri Bhaji",
+    "normalizedName": "puri-bhaji",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Rajma Rice",
+    "normalizedName": "rajma-rice",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Roti",
+    "normalizedName": "roti",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Sambar",
+    "normalizedName": "sambar",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Upma",
+    "normalizedName": "upma",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Veg Pulao",
+    "normalizedName": "veg-pulao",
+    "images": [
+      "/menu-images/placeholder.jpg"
+    ],
+    "defaultImage": "/menu-images/placeholder.jpg",
+    "needsImage": true
+  },
+  {
+    "displayName": "Adhirasam",
+    "normalizedName": "adhirasam",
+    "images": [
+      "/menu-images/adhirasam.jpg"
+    ],
+    "defaultImage": "/menu-images/adhirasam.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Aloo Gobi",
+    "normalizedName": "aloogobi",
+    "images": [
+      "/menu-images/aloogobi.jpg"
+    ],
+    "defaultImage": "/menu-images/aloogobi.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Aloo Matar",
+    "normalizedName": "aloomatar",
+    "images": [
+      "/menu-images/aloomatar.jpg"
+    ],
+    "defaultImage": "/menu-images/aloomatar.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Aloo Methi",
+    "normalizedName": "aloomethi",
+    "images": [
+      "/menu-images/aloomethi.jpg"
+    ],
+    "defaultImage": "/menu-images/aloomethi.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Aloo Shimla Mirch",
+    "normalizedName": "alooshimlamirch",
+    "images": [
+      "/menu-images/alooshimlamirch.jpg"
+    ],
+    "defaultImage": "/menu-images/alooshimlamirch.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Aloo Tikki",
+    "normalizedName": "alootikki",
+    "images": [
+      "/menu-images/alootikki.jpg"
+    ],
+    "defaultImage": "/menu-images/alootikki.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Anarsa",
+    "normalizedName": "anarsa",
+    "images": [
+      "/menu-images/anarsa.jpg"
+    ],
+    "defaultImage": "/menu-images/anarsa.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Ariselu",
+    "normalizedName": "ariselu",
+    "images": [
+      "/menu-images/ariselu.jpg"
+    ],
+    "defaultImage": "/menu-images/ariselu.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Bandar Laddu",
+    "normalizedName": "bandarladdu",
+    "images": [
+      "/menu-images/bandarladdu.jpg"
+    ],
+    "defaultImage": "/menu-images/bandarladdu.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Basundi",
+    "normalizedName": "basundi",
+    "images": [
+      "/menu-images/basundi.jpg"
+    ],
+    "defaultImage": "/menu-images/basundi.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Bhatura",
+    "normalizedName": "bhatura",
+    "images": [
+      "/menu-images/bhatura.jpg"
+    ],
+    "defaultImage": "/menu-images/bhatura.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Bhindi Masala",
+    "normalizedName": "bhindimasala",
+    "images": [
+      "/menu-images/bhindimasala.jpg"
+    ],
+    "defaultImage": "/menu-images/bhindimasala.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Boondi",
+    "normalizedName": "boondi",
+    "images": [
+      "/menu-images/boondi.jpg"
+    ],
+    "defaultImage": "/menu-images/boondi.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Butter Chicken",
+    "normalizedName": "butterchicken",
+    "images": [
+      "/menu-images/butterchicken.jpg"
+    ],
+    "defaultImage": "/menu-images/butterchicken.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chak Hao Kheer",
+    "normalizedName": "chakhaokheer",
+    "images": [
+      "/menu-images/chakhaokheer.jpg"
+    ],
+    "defaultImage": "/menu-images/chakhaokheer.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Cham Cham",
+    "normalizedName": "chamcham",
+    "images": [
+      "/menu-images/chamcham.jpg"
+    ],
+    "defaultImage": "/menu-images/chamcham.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chana Masala",
+    "normalizedName": "chanamasala",
+    "images": [
+      "/menu-images/chanamasala.jpg"
+    ],
+    "defaultImage": "/menu-images/chanamasala.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chhena Kheeri",
+    "normalizedName": "chhenakheeri",
+    "images": [
+      "/menu-images/chhenakheeri.jpg"
+    ],
+    "defaultImage": "/menu-images/chhenakheeri.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chicken Razala",
+    "normalizedName": "chickenrazala",
+    "images": [
+      "/menu-images/chickenrazala.jpg"
+    ],
+    "defaultImage": "/menu-images/chickenrazala.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chicken Tikka",
+    "normalizedName": "chickentikka",
+    "images": [
+      "/menu-images/chickentikka.jpg"
+    ],
+    "defaultImage": "/menu-images/chickentikka.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chicken Tikka Masala",
+    "normalizedName": "chickentikkamasala",
+    "images": [
+      "/menu-images/chickentikkamasala.jpg"
+    ],
+    "defaultImage": "/menu-images/chickentikkamasala.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Chikki",
+    "normalizedName": "chikki",
+    "images": [
+      "/menu-images/chikki.jpg"
+    ],
+    "defaultImage": "/menu-images/chikki.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Daal Baati Churma",
+    "normalizedName": "daalbaatichurma",
+    "images": [
+      "/menu-images/daalbaatichurma.jpg"
+    ],
+    "defaultImage": "/menu-images/daalbaatichurma.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Daal Puri",
+    "normalizedName": "daalpuri",
+    "images": [
+      "/menu-images/daalpuri.jpg"
+    ],
+    "defaultImage": "/menu-images/daalpuri.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Dal Makhani",
+    "normalizedName": "dalmakhani",
+    "images": [
+      "/menu-images/dalmakhani.jpg"
+    ],
+    "defaultImage": "/menu-images/dalmakhani.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Dal Tadka",
+    "normalizedName": "daltadka",
+    "images": [
+      "/menu-images/daltadka.jpg"
+    ],
+    "defaultImage": "/menu-images/daltadka.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Dharwad Pedha",
+    "normalizedName": "dharwadpedha",
+    "images": [
+      "/menu-images/dharwadpedha.jpg"
+    ],
+    "defaultImage": "/menu-images/dharwadpedha.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Doodhpak",
+    "normalizedName": "doodhpak",
+    "images": [
+      "/menu-images/doodhpak.jpg"
+    ],
+    "defaultImage": "/menu-images/doodhpak.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Double Ka Meetha",
+    "normalizedName": "doublekameetha",
+    "images": [
+      "/menu-images/doublekameetha.jpg"
+    ],
+    "defaultImage": "/menu-images/doublekameetha.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Dum Aloo",
+    "normalizedName": "dumaloo",
+    "images": [
+      "/menu-images/dumaloo.jpg"
+    ],
+    "defaultImage": "/menu-images/dumaloo.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Gajar Ka Halwa",
+    "normalizedName": "gajarkahalwa",
+    "images": [
+      "/menu-images/gajarkahalwa.jpg"
+    ],
+    "defaultImage": "/menu-images/gajarkahalwa.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Gavvalu",
+    "normalizedName": "gavvalu",
+    "images": [
+      "/menu-images/gavvalu.jpg"
+    ],
+    "defaultImage": "/menu-images/gavvalu.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Ghevar",
+    "normalizedName": "ghevar",
+    "images": [
+      "/menu-images/ghevar.jpg"
+    ],
+    "defaultImage": "/menu-images/ghevar.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Gulab Jamun",
+    "normalizedName": "gulabjamun",
+    "images": [
+      "/menu-images/gulabjamun.jpg"
+    ],
+    "defaultImage": "/menu-images/gulabjamun.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Imarti",
+    "normalizedName": "imarti",
+    "images": [
+      "/menu-images/imarti.jpg"
+    ],
+    "defaultImage": "/menu-images/imarti.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Jalebi",
+    "normalizedName": "jalebi",
+    "images": [
+      "/menu-images/jalebi.jpg"
+    ],
+    "defaultImage": "/menu-images/jalebi.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Kachori",
+    "normalizedName": "kachori",
+    "images": [
+      "/menu-images/kachori.jpg"
+    ],
+    "defaultImage": "/menu-images/kachori.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Kadai Paneer",
+    "normalizedName": "kadaipaneer",
+    "images": [
+      "/menu-images/kadaipaneer.jpg"
+    ],
+    "defaultImage": "/menu-images/kadaipaneer.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Kadhi Pakoda",
+    "normalizedName": "kadhipakoda",
+    "images": [
+      "/menu-images/kadhipakoda.jpg"
+    ],
+    "defaultImage": "/menu-images/kadhipakoda.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Kajjikaya",
+    "normalizedName": "kajjikaya",
+    "images": [
+      "/menu-images/kajjikaya.jpg"
+    ],
+    "defaultImage": "/menu-images/kajjikaya.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Kakinada Khaja",
+    "normalizedName": "kakinadakhaja",
+    "images": [
+      "/menu-images/kakinadakhaja.jpg"
+    ],
+    "defaultImage": "/menu-images/kakinadakhaja.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Kalakand",
+    "normalizedName": "kalakand",
+    "images": [
+      "/menu-images/kalakand.jpg"
+    ],
+    "defaultImage": "/menu-images/kalakand.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Karela Bharta",
+    "normalizedName": "karelabharta",
+    "images": [
+      "/menu-images/karelabharta.jpg"
+    ],
+    "defaultImage": "/menu-images/karelabharta.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Kofta",
+    "normalizedName": "kofta",
+    "images": [
+      "/menu-images/kofta.jpg"
+    ],
+    "defaultImage": "/menu-images/kofta.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Kuzhi Paniyaram",
+    "normalizedName": "kuzhipaniyaram",
+    "images": [
+      "/menu-images/kuzhipaniyaram.jpg"
+    ],
+    "defaultImage": "/menu-images/kuzhipaniyaram.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Lassi",
+    "normalizedName": "lassi",
+    "images": [
+      "/menu-images/lassi.jpg"
+    ],
+    "defaultImage": "/menu-images/lassi.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Ledikeni",
+    "normalizedName": "ledikeni",
+    "images": [
+      "/menu-images/ledikeni.jpg"
+    ],
+    "defaultImage": "/menu-images/ledikeni.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Litti Chokha",
+    "normalizedName": "littichokha",
+    "images": [
+      "/menu-images/littichokha.jpg"
+    ],
+    "defaultImage": "/menu-images/littichokha.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Lyangcha",
+    "normalizedName": "lyangcha",
+    "images": [
+      "/menu-images/lyangcha.jpg"
+    ],
+    "defaultImage": "/menu-images/lyangcha.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Maach Jhol",
+    "normalizedName": "maachjhol",
+    "images": [
+      "/menu-images/maachjhol.jpg"
+    ],
+    "defaultImage": "/menu-images/maachjhol.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Makki Di Roti Sarson Da Saag",
+    "normalizedName": "makkidirotisarsondasaag",
+    "images": [
+      "/menu-images/makkidirotisarsondasaag.jpg"
+    ],
+    "defaultImage": "/menu-images/makkidirotisarsondasaag.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Malapua",
+    "normalizedName": "malapua",
+    "images": [
+      "/menu-images/malapua.jpg"
+    ],
+    "defaultImage": "/menu-images/malapua.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Misi Roti",
+    "normalizedName": "misiroti",
+    "images": [
+      "/menu-images/misiroti.jpg"
+    ],
+    "defaultImage": "/menu-images/misiroti.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Misti Doi",
+    "normalizedName": "mistidoi",
+    "images": [
+      "/menu-images/mistidoi.jpg"
+    ],
+    "defaultImage": "/menu-images/mistidoi.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Modak",
+    "normalizedName": "modak",
+    "images": [
+      "/menu-images/modak.jpg"
+    ],
+    "defaultImage": "/menu-images/modak.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Mysore Pak",
+    "normalizedName": "mysorepak",
+    "images": [
+      "/menu-images/mysorepak.jpg"
+    ],
+    "defaultImage": "/menu-images/mysorepak.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Navrattan Korma",
+    "normalizedName": "navrattankorma",
+    "images": [
+      "/menu-images/navrattankorma.jpg"
+    ],
+    "defaultImage": "/menu-images/navrattankorma.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Palak Paneer",
+    "normalizedName": "palakpaneer",
+    "images": [
+      "/menu-images/palakpaneer.jpg"
+    ],
+    "defaultImage": "/menu-images/palakpaneer.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Paneer Butter Masala",
+    "normalizedName": "paneerbuttermasala",
+    "images": [
+      "/menu-images/paneerbuttermasala.jpg"
+    ],
+    "defaultImage": "/menu-images/paneerbuttermasala.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Phirni",
+    "normalizedName": "phirni",
+    "images": [
+      "/menu-images/phirni.jpg"
+    ],
+    "defaultImage": "/menu-images/phirni.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Pithe",
+    "normalizedName": "pithe",
+    "images": [
+      "/menu-images/pithe.jpg"
+    ],
+    "defaultImage": "/menu-images/pithe.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Poornalu",
+    "normalizedName": "poornalu",
+    "images": [
+      "/menu-images/poornalu.jpg"
+    ],
+    "defaultImage": "/menu-images/poornalu.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Pootharekulu",
+    "normalizedName": "pootharekulu",
+    "images": [
+      "/menu-images/pootharekulu.jpg"
+    ],
+    "defaultImage": "/menu-images/pootharekulu.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Qubani Ka Meetha",
+    "normalizedName": "qubanikameetha",
+    "images": [
+      "/menu-images/qubanikameetha.jpg"
+    ],
+    "defaultImage": "/menu-images/qubanikameetha.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Rabri",
+    "normalizedName": "rabri",
+    "images": [
+      "/menu-images/rabri.jpg"
+    ],
+    "defaultImage": "/menu-images/rabri.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Rasgulla",
+    "normalizedName": "rasgulla",
+    "images": [
+      "/menu-images/rasgulla.jpg"
+    ],
+    "defaultImage": "/menu-images/rasgulla.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Ras Malai",
+    "normalizedName": "rasmalai",
+    "images": [
+      "/menu-images/rasmalai.jpg"
+    ],
+    "defaultImage": "/menu-images/rasmalai.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Sandesh",
+    "normalizedName": "sandesh",
+    "images": [
+      "/menu-images/sandesh.jpg"
+    ],
+    "defaultImage": "/menu-images/sandesh.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Shankarpali",
+    "normalizedName": "shankarpali",
+    "images": [
+      "/menu-images/shankarpali.jpg"
+    ],
+    "defaultImage": "/menu-images/shankarpali.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Sheera",
+    "normalizedName": "sheera",
+    "images": [
+      "/menu-images/sheera.jpg"
+    ],
+    "defaultImage": "/menu-images/sheera.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Sheer Korma",
+    "normalizedName": "sheerkorma",
+    "images": [
+      "/menu-images/sheerkorma.jpg"
+    ],
+    "defaultImage": "/menu-images/sheerkorma.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Shrikhand",
+    "normalizedName": "shrikhand",
+    "images": [
+      "/menu-images/shrikhand.jpg"
+    ],
+    "defaultImage": "/menu-images/shrikhand.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Sohan Halwa",
+    "normalizedName": "sohanhalwa",
+    "images": [
+      "/menu-images/sohanhalwa.jpg"
+    ],
+    "defaultImage": "/menu-images/sohanhalwa.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Sohan Papdi",
+    "normalizedName": "sohanpapdi",
+    "images": [
+      "/menu-images/sohanpapdi.jpg"
+    ],
+    "defaultImage": "/menu-images/sohanpapdi.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Sutar Feni",
+    "normalizedName": "sutarfeni",
+    "images": [
+      "/menu-images/sutarfeni.jpg"
+    ],
+    "defaultImage": "/menu-images/sutarfeni.jpg",
+    "needsImage": false
+  },
+  {
+    "displayName": "Unni Appam",
+    "normalizedName": "unniappam",
+    "images": [
+      "/menu-images/unniappam.jpg"
+    ],
+    "defaultImage": "/menu-images/unniappam.jpg",
+    "needsImage": false
+  }
+]

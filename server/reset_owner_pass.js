@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 const bcrypt = require('bcryptjs');
 const dotenv = require('dotenv');
-dotenv.config();
+const path = require('path');
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://0.0.0.0:27017/saveserve')
     .then(async () => {

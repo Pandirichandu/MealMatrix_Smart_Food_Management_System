@@ -1,5 +1,5 @@
 const axios = require('axios');
-const mongoose = require('mongoose');
+const mongoose = require('../server/node_modules/mongoose');
 const User = require('../server/models/User');
 const Hostel = require('../server/models/Hostel');
 const MealBooking = require('../server/models/MealBooking');
@@ -22,10 +22,14 @@ async function runTest() {
         });
         console.log('Created Hostel:', hostel._id);
 
+        const bcrypt = require('bcryptjs');
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash('password123', salt);
+
         const owner = await User.create({
             name: 'Test Owner',
             email: `owner_${Date.now()}@test.com`,
-            password: 'password123',
+            password: hashedPassword,
             role: 'owner',
             hostelId: hostel._id
         });
@@ -34,7 +38,7 @@ async function runTest() {
         const student = await User.create({
             name: 'Test Student',
             email: `student_${Date.now()}@test.com`,
-            password: 'password123',
+            password: hashedPassword,
             role: 'student',
             hostelId: hostel._id,
             studentId: `STU_${Date.now()}`
@@ -69,7 +73,7 @@ async function runTest() {
             email: owner.email,
             password: 'password123'
         });
-        const token = loginRes.data.token;
+        const cookie = loginRes.headers['set-cookie'][0];
 
         // 4. Test API
         console.log('Calling Attendance API...');
@@ -78,7 +82,10 @@ async function runTest() {
                 date: dateStr,
                 mealType: 'Lunch'
             },
-            headers: { 'x-auth-token': token }
+            headers: {
+                'Cookie': cookie,
+                'Content-Type': 'application/json'
+            }
         });
 
         console.log('API Status:', res.status);

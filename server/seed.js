@@ -4,7 +4,8 @@ const User = require('./models/User');
 const Hostel = require('./models/Hostel');
 const Menu = require('./models/Menu');
 const dotenv = require('dotenv');
-dotenv.config();
+const path = require('path');
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 console.log('Connecting to MongoDB...', process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://0.0.0.0:27017/mealmatrix')

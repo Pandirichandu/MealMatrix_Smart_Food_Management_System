@@ -528,7 +528,7 @@ router.post('/save-menu', auth, checkRole(['owner']), async (req, res) => {
                     hostelId: owner.hostelId,
                     title: 'Menu Published',
                     message: `${normalizedMealType} menu for ${date} has been published successfully.`,
-                    type: 'success',
+                    type: 'INFO',
                     relatedId: `PUBLISH-${date}-${normalizedMealType}`,
                     link: '/owner/menu'
                 });
@@ -1264,6 +1264,105 @@ router.get('/attendance-grid', auth, checkRole(['owner']), async (req, res) => {
 
     } catch (err) {
         console.error("Attendance Grid Error:", err.message);
+        res.status(500).send('Server Error');
+    }
+});
+
+// @route   GET api/owner/attendance
+// @desc    Get attendance details for a specific date and meal type
+// @access  Private (Owner)
+router.get('/attendance', auth, checkRole(['owner']), async (req, res) => {
+    try {
+        const { date, mealType } = req.query;
+        if (!date || !mealType) {
+            return res.status(400).json({ msg: 'Date and mealType are required' });
+        }
+
+        const owner = await User.findById(req.user.id);
+        if (!owner.hostelId) {
+            return res.status(400).json({ msg: 'Owner not assigned to hostel' });
+        }
+
+        // Check if date is in the future
+        const todayStr = new Date().toISOString().split('T')[0];
+        if (date > todayStr) {
+            return res.json({ msg: 'Cannot fetch attendance for future dates', summary: { booked: 0, attended: 0, absent: 0 }, records: [] });
+        }
+
+        const startOfDay = new Date(`${date}T00:00:00.000Z`);
+        const endOfDay = new Date(`${date}T23:59:59.999Z`);
+
+        // Fetch bookings and attendance records
+        const bookings = await MealBooking.find({
+            hostelId: owner.hostelId,
+            date: { $gte: startOfDay, $lte: endOfDay },
+            mealType: mealType.toLowerCase()
+        }).populate('studentId', 'name studentId email').lean();
+
+        const attendances = await Attendance.find({
+            hostelId: owner.hostelId,
+            date: { $gte: startOfDay, $lte: endOfDay },
+            mealType: mealType.toLowerCase()
+        }).lean();
+
+        const attendanceMap = new Map();
+        attendances.forEach(a => {
+            attendanceMap.set(a.studentId.toString(), a.scannedAt);
+        });
+
+        const records = bookings.map(booking => {
+            const student = booking.studentId;
+            const hasAttended = attendanceMap.has(student._id.toString());
+            return {
+                student: {
+                    id: student._id,
+                    name: student.name,
+                    studentId: student.studentId,
+                    email: student.email
+                },
+                status: hasAttended ? 'Present' : 'Absent',
+                scannedAt: hasAttended ? attendanceMap.get(student._id.toString()) : null,
+                items: booking.items
+            };
+        });
+
+        // Also add attendance records for students who attended but did not book (if any)
+        const bookedStudentIds = new Set(bookings.map(b => b.studentId._id.toString()));
+        for (const a of attendances) {
+            const sId = a.studentId.toString();
+            if (!bookedStudentIds.has(sId)) {
+                const student = await User.findById(a.studentId).select('name studentId email').lean();
+                if (student) {
+                    records.push({
+                        student: {
+                            id: student._id,
+                            name: student.name,
+                            studentId: student.studentId,
+                            email: student.email
+                        },
+                        status: 'Present',
+                        scannedAt: a.scannedAt,
+                        items: []
+                    });
+                }
+            }
+        }
+
+        const attendedCount = records.filter(r => r.status === 'Present').length;
+        const absentCount = records.filter(r => r.status === 'Absent').length;
+
+        res.json({
+            success: true,
+            summary: {
+                booked: bookings.length,
+                attended: attendedCount,
+                absent: absentCount
+            },
+            records
+        });
+
+    } catch (err) {
+        console.error("Fetch Attendance Error:", err.message);
         res.status(500).send('Server Error');
     }
 });

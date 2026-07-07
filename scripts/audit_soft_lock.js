@@ -1,5 +1,6 @@
 const axios = require('axios');
-const mongoose = require('mongoose');
+const mongoose = require('../server/node_modules/mongoose');
+const User = require('../server/models/User'); // Pre-register User schema
 const jwt = require('jsonwebtoken');
 const path = require('path');
 const fs = require('fs');

@@ -138,6 +138,14 @@ async function runAudit() {
         // 3. BOOKING LOGIC VALIDATION
         log('\n--- PHASE 3: BOOKING LOGIC ---', COLORS.YELLOW);
 
+        // Set Meal Intention to Present
+        await axios.post(`${API_URL}/api/student/meal-intention`, {
+            date: tDateStr,
+            mealType: 'breakfast',
+            status: 'present'
+        }, getHeaders(studentCookie));
+        log('✓ Student Meal Intention set to Present', COLORS.GREEN);
+
         // Test A: Normal Booking
         await axios.post(`${API_URL}/api/student/select`, {
             date: tDateStr,

@@ -4,10 +4,9 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
-
 const path = require('path');
-dotenv.config({ path: path.join(__dirname, '../.env') });
 
+dotenv.config({ path: path.join(__dirname, '../.env') });
 // Validate critical environment variables
 const requiredEnvVars = ['JWT_SECRET', 'MONGODB_URI'];
 const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);

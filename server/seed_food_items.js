@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const FoodItem = require('./models/FoodItem');
 const dotenv = require('dotenv');
-dotenv.config();
+const path = require('path');
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/saveserve';
 

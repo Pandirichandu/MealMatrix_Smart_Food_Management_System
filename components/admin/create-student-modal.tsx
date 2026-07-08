@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import { API_URL } from "@/lib/config";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -36,7 +37,7 @@ export default function CreateStudentModal({ onSuccess, hostels }: CreateStudent
         setLoading(true);
 
         try {
-            await axios.post("http://localhost:5003/api/admin/students", formData, {
+            await axios.post(`${API_URL}/api/admin/students`, formData, {
                 withCredentials: true,
             });
             toast.success("Student created successfully!");

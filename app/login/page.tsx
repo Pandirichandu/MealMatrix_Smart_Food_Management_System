@@ -31,6 +31,9 @@ export default function LoginPage() {
 
             const { user } = res.data;
 
+            // Set tab-bound session active flag
+            sessionStorage.setItem("sessionActive", "true");
+
             toast.success("Login Successful", {
                 description: `Welcome back, ${user.name}`
             });

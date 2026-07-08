@@ -9,7 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 
-const API_URL = 'http://localhost:5003/api';
+import { API_URL } from '@/lib/config';
 
 export default function PilotPage() {
     const [reports, setReports] = useState<any[]>([]);
@@ -39,7 +39,7 @@ export default function PilotPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await axios.post(`${API_URL}/admin/pilot-reports`, formData, { withCredentials: true });
+            await axios.post(`${API_URL}/api/admin/pilot-reports`, formData, { withCredentials: true });
             fetchReports();
             setFormData({
                 usersTesterCount: '',

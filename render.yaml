@@ -23,7 +23,7 @@ services:
     name: mealmatrix-frontend
     env: node
     buildCommand: npm install && npm run build
-    startCommand: npm start
+    startCommand: npx next start
     envVars:
       - key: NEXT_PUBLIC_API_URL
         fromService:

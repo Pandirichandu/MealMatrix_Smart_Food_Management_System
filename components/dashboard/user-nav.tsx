@@ -50,6 +50,7 @@ export function UserNav() {
     const handleLogout = async () => {
         try {
             await axios.post(`${API_URL}/api/auth/logout`, {}, { withCredentials: true })
+            sessionStorage.removeItem('sessionActive')
             localStorage.removeItem('token') // If used
             toast.success("Logged out successfully")
             router.push('/login')

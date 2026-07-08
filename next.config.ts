@@ -19,18 +19,19 @@ const nextConfig: NextConfig = {
     return config;
   },
   async rewrites() {
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5003';
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:5003/api/:path*',
+        destination: `${backendUrl}/api/:path*`,
       },
       {
         source: '/menu-images/:path*',
-        destination: 'http://localhost:5003/menu-images/:path*',
+        destination: `${backendUrl}/menu-images/:path*`,
       },
       {
         source: '/uploads/:path*',
-        destination: 'http://localhost:5003/uploads/:path*',
+        destination: `${backendUrl}/uploads/:path*`,
       },
     ];
   },

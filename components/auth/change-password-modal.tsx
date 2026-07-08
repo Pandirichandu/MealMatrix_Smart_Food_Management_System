@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import { API_URL } from "@/lib/config";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -35,7 +36,7 @@ export default function ChangePasswordModal({ isOpen, onClose }: ChangePasswordM
         try {
             setLoading(true);
             await axios.post(
-                "http://localhost:5003/api/auth/change-password",
+                `${API_URL}/api/auth/change-password`,
                 { newPassword },
                 { withCredentials: true }
             );

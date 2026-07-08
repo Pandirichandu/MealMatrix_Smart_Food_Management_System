@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 import { ClientToaster } from "@/components/ui/client-toaster";
+import { SessionGuard } from "@/components/auth/session-guard";
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased bg-background text-foreground font-sans min-h-screen flex flex-col`}
       >
+        <SessionGuard />
         {children}
         <ClientToaster />
       </body>

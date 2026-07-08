@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,6 +21,8 @@ import {
     X
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import axios from "axios";
+import { API_URL } from "@/lib/config";
 
 interface SidebarProps {
     role: "admin" | "owner" | "student";
@@ -106,6 +108,19 @@ export function Sidebar({ role }: SidebarProps) {
 }
 
 function SidebarContent({ role, pathname, links }: { role: string, pathname: string, links: any[] }) {
+    const router = useRouter();
+
+    const handleLogout = async () => {
+        try {
+            await axios.post(`${API_URL}/api/auth/logout`, {}, { withCredentials: true });
+        } catch (error) {
+            console.error("Logout request failed:", error);
+        }
+        sessionStorage.removeItem("sessionActive");
+        localStorage.removeItem("token");
+        router.push("/login");
+    };
+
     return (
         <>
             <div className="flex h-24 items-center px-8">
@@ -148,11 +163,13 @@ function SidebarContent({ role, pathname, links }: { role: string, pathname: str
             </div>
 
             <div className="p-6 border-t border-gray-100 dark:border-zinc-800">
-                <Button variant="outline" className="w-full justify-start gap-2 text-gray-600 dark:text-gray-400 hover:text-red-600 hover:bg-red-50 hover:border-red-100 dark:hover:bg-red-900/20 transition-all h-12 rounded-xl" asChild>
-                    <Link href="/">
-                        <LogOut className="h-4 w-4" />
-                        Sign Out
-                    </Link>
+                <Button 
+                    variant="outline" 
+                    className="w-full justify-start gap-2 text-gray-600 dark:text-gray-400 hover:text-red-600 hover:bg-red-50 hover:border-red-100 dark:hover:bg-red-900/20 transition-all h-12 rounded-xl"
+                    onClick={handleLogout}
+                >
+                    <LogOut className="h-4 w-4" />
+                    Sign Out
                 </Button>
             </div>
         </>

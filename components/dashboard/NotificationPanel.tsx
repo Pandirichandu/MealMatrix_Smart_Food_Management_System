@@ -4,6 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_URL } from '@/lib/config';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Bell } from 'lucide-react';
 
@@ -30,7 +31,7 @@ export function NotificationPanel({ role }: { role: string }) {
                 // Using student endpoint if role is student.
 
                 let endpoint = '';
-                if (role === 'student') endpoint = 'http://localhost:5003/api/student/notifications'; // Using full URL to be safe or relative. 
+                if (role === 'student') endpoint = `${API_URL}/api/student/notifications`; // Using dynamic API_URL. 
                 // Next.js client side usually uses relative /api but invalid for absolute axios if not proxy.
                 // Next.js usually runs on 3000, backend on 5003. Need full URL or proxy.
                 // Plan didn't specify proxy setup, but previous files used full URL in test scripts.
@@ -42,10 +43,8 @@ export function NotificationPanel({ role }: { role: string }) {
                 // Let's use relative path expecting Next.js re-writes or CORS.
                 // Edit: To be safe, I'll use a hardcoded base URL for now as per common dev setups.
 
-                const API_URL = 'http://localhost:5003/api';
-
                 if (role === 'student') {
-                    const res = await axios.get(`${API_URL}/student/notifications`, { withCredentials: true });
+                    const res = await axios.get(`${API_URL}/api/student/notifications`, { withCredentials: true });
                     setNotifications(res.data);
                 }
             } catch (err) {

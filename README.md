@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meal Matrix System 🍱
 
-## Getting Started
+An advanced, smart food management platform featuring QR-based attendance automation, real-time analytics dashboards, secure authentication, and a scalable architecture.
 
-First, run the development server:
+## 🚀 Live Demo
+Experience the live application here: **[Meal Matrix System Live Demo](https://meal-matrix-smart-food-management-s.vercel.app/)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Dynamic QR Code Attendance:** Secure, real-time QR generation and scanning to prevent proxy attendance.
+- **Real-Time Analytics & Admin Dashboards:** Comprehensive dashboards for administrators to track bookings, consumption patterns, and student attendance.
+- **Secure JWT Authentication:** Role-based access control (RBAC) ensuring secure communication and interface safety.
+- **State-of-the-Art UI/UX:** Responsive and interactive interface built using React, Tailwind CSS, and Framer Motion.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend:** React.js, Next.js, Framer Motion, Tailwind CSS
+- **Backend:** Node.js, Express / Django REST Framework
+- **Database:** MongoDB / MySQL
+- **Tooling & Deployments:** Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Getting Started
 
-## Deploy on Vercel
+### Prerequisites
+Ensure you have [Node.js](https://nodejs.org) installed on your system.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Pandirichandu/MealMatrix_Smart_Food_Management_System.git
+   cd MealMatrix_Smart_Food_Management_System
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set Up Environment Variables:**
+   Create a `.env.local` file in the root directory and add your configurations (refer to `.env.example` if available).
+
+4. **Run the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+---
+
+## 📐 System Architecture
+The application runs on a split architecture:
+- The React/Next.js frontend connects to a stateless REST API backend.
+- Database optimization and indexing handle peak concurrent request traffic smoothly.

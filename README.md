@@ -2,6 +2,8 @@
 
 An advanced, smart food management platform featuring QR-based attendance automation, real-time analytics dashboards, secure authentication, and a scalable architecture.
 
+![Meal Matrix System Screenshot](public/screenshot.png)
+
 ## 🚀 Live Demo
 Experience the live application here: **[Meal Matrix System Live Demo](https://meal-matrix-smart-food-management-s.vercel.app/)**
 

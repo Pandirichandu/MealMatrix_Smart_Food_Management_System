@@ -716,7 +716,7 @@ router.put('/dishes/:id', auth, checkRole(['owner']), upload.single('image'), as
         }
 
         // Verify Ownership
-        if (!dish.isCustomDish || dish.ownerId?.toString() !== req.user.id) {
+        if (dish.ownerId && dish.ownerId.toString() !== req.user.id) {
             return res.status(403).json({ msg: 'You do not have permission to edit this dish.' });
         }
 
@@ -777,7 +777,7 @@ router.delete('/dishes/:id', auth, checkRole(['owner']), async (req, res) => {
         }
 
         // Verify Ownership
-        if (!dish.isCustomDish || dish.ownerId?.toString() !== req.user.id) {
+        if (dish.ownerId && dish.ownerId.toString() !== req.user.id) {
             return res.status(403).json({ msg: 'You do not have permission to delete this dish.' });
         }
 

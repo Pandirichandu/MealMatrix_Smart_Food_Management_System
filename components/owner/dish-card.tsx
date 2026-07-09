@@ -137,7 +137,7 @@ export function DishCard({ item, mode = 'normal', onUpdate, onDelete }: DishCard
         setConfirmDelete(false);
     }
 
-    if (mode === 'edit' && item.isCustomDish) {
+    if (mode === 'edit') {
         return (
             <Card className="overflow-hidden flex flex-col border-primary/40 ring-2 ring-primary/20 shadow-md">
                 {/* Img Preview Edit Area */}
@@ -217,7 +217,7 @@ export function DishCard({ item, mode = 'normal', onUpdate, onDelete }: DishCard
         );
     }
 
-    if (mode === 'delete' && item.isCustomDish && confirmDelete) {
+    if (mode === 'delete' && confirmDelete) {
         return (
             <Card className="overflow-hidden flex flex-col border-destructive ring-2 ring-destructive/20 shadow-md">
                 <div className="p-5 flex-1 flex flex-col items-center text-center justify-center gap-3">
@@ -247,7 +247,7 @@ export function DishCard({ item, mode = 'normal', onUpdate, onDelete }: DishCard
     return (
         <Card className={`overflow-hidden group transition-all flex flex-col relative
             ${mode === 'normal' ? 'hover:shadow-md' : 'opacity-80'}
-            ${mode === 'delete' && item.isCustomDish ? 'border-destructive/30 hover:border-destructive' : ''}
+            ${mode === 'delete' ? 'border-destructive/30 hover:border-destructive' : ''}
         `}>
             {/* Image Header */}
             <div className={`relative h-32 w-full bg-muted ${mode === 'normal' ? 'group-hover:opacity-90' : ''}`}>
@@ -290,7 +290,7 @@ export function DishCard({ item, mode = 'normal', onUpdate, onDelete }: DishCard
                 </div>
 
                 {/* Delete Mode Trigger Footer */}
-                {mode === 'delete' && item.isCustomDish && !confirmDelete && (
+                {mode === 'delete' && !confirmDelete && (
                     <div className="mt-4 pt-4 border-t border-border flex justify-end">
                         <Button
                             variant="destructive"

@@ -103,6 +103,15 @@ async function runVerification() {
         const studentCookie = studentRes.headers['set-cookie'][0];
         console.log("   Student Logged In.");
 
+        // 3b. SET MEAL INTENTION TO PRESENT
+        console.log("\n3b. Setting Student Meal Intention to Present...");
+        await axios.post(`${API_URL}/api/student/meal-intention`, {
+            date: tomorrow,
+            mealType: 'breakfast',
+            status: 'present'
+        }, getHeaders(studentCookie));
+        console.log("   Meal Intention set.");
+
         // 4. STUDENT ATTEMPT BOOKING (Valid Quantity)
         console.log("\n4. Student Booking Item (Qty: 2)...");
         const bookingPayloadValid = {

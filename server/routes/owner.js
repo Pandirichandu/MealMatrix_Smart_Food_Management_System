@@ -83,23 +83,8 @@ let dishCache = {
     duration: 60000 // 1 minute cache
 };
 
-// Configure Multer Storage
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        const uploadPath = path.join(__dirname, '../public/menu-images/custom');
-        // Ensure directory exists
-        if (!fs.existsSync(uploadPath)) {
-            fs.mkdirSync(uploadPath, { recursive: true });
-        }
-        cb(null, uploadPath);
-    },
-    filename: function (req, file, cb) {
-        // Generate unique filename: custom-timestamp-random.ext
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-        const ext = path.extname(file.originalname);
-        cb(null, 'custom-' + uniqueSuffix + ext);
-    }
-});
+// Configure Multer Storage in Memory for Serverless Compatibility (Vercel)
+const storage = multer.memoryStorage();
 
 // File Filter
 const fileFilter = (req, file, cb) => {
@@ -672,7 +657,7 @@ router.post('/add-custom-dish', auth, upload.single('image'), async (req, res) =
 
         let imageUrl = '/menu-images/placeholder.jpg';
         if (req.file) {
-            imageUrl = `/menu-images/custom/${req.file.filename}`;
+            imageUrl = `data:${req.file.mimetype};base64,${req.file.buffer.toString('base64')}`;
         } else {
             return res.status(400).json({ msg: 'Image is mandatory for custom dishes' });
         }
@@ -757,7 +742,7 @@ router.put('/dishes/:id', auth, checkRole(['owner']), upload.single('image'), as
 
         // Optional new image parsing via multer
         if (req.file) {
-            dish.imageUrl = `/menu-images/custom/${req.file.filename}`;
+            dish.imageUrl = `data:${req.file.mimetype};base64,${req.file.buffer.toString('base64')}`;
         }
 
         await dish.save();
